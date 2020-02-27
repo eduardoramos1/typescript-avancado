@@ -1,14 +1,20 @@
-// namespaces servem para ajudar achar classes usando o autocomplete do ts
-var Views;
-(function (Views) {
-    // abstract sao classes que nao permitem serem instanciadas
-    class View {
-        constructor(seletor) {
-            this._elemento = $(seletor);
+System.register([], function (exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
+    var View;
+    return {
+        setters: [],
+        execute: function () {
+            // abstract sao classes que nao permitem serem instanciadas
+            View = class View {
+                constructor(seletor) {
+                    this._elemento = $(seletor);
+                }
+                update(model) {
+                    this._elemento.html(this.template(model));
+                }
+            };
+            exports_1("View", View);
         }
-        update(model) {
-            this._elemento.html(this.template(model));
-        }
-    }
-    Views.View = View;
-})(Views || (Views = {}));
+    };
+});
