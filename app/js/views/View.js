@@ -7,7 +7,7 @@ System.register([], function (exports_1, context_1) {
         execute: function () {
             // abstract sao classes que nao permitem serem instanciadas
             View = class View {
-                constructor(seletor, escapar) {
+                constructor(seletor, escapar = false) {
                     this._elemento = $(seletor);
                     this._escapar = escapar;
                 }

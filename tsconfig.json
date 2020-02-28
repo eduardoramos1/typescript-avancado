@@ -4,7 +4,8 @@
 		"outDir": "app/js",
 		"noEmitOnError": true,
 		"noImplicitAny": true,
-		"module": "System"
+		"module": "System",
+		"strictNullChecks": true
 	},
 	"include": ["app/ts/**/*"]
 }
