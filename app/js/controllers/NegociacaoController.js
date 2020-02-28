@@ -15,20 +15,20 @@ System.register(["./../views/index", "./../models/index"], function (exports_1, 
             NegociacaoController = class NegociacaoController {
                 constructor() {
                     this._negociacoes = new index_2.Negociacoes();
-                    this._negociacoesView = new index_1.NegociacoesView("#negociacoesView");
-                    this._mensagemView = new index_1.MensagemView("#mensagemView");
-                    this._inputData = $("#data");
-                    this._inputQuantidade = $("#quantidade");
-                    this._inputValor = $("#valor");
+                    this._negociacoesView = new index_1.NegociacoesView('#negociacoesView');
+                    this._mensagemView = new index_1.MensagemView('#mensagemView');
+                    this._inputData = $('#data');
+                    this._inputQuantidade = $('#quantidade');
+                    this._inputValor = $('#valor');
                     this._negociacoesView.update(this._negociacoes);
                 }
                 adiciona(event) {
                     event.preventDefault();
-                    const negociacao = new index_2.Negociacao(new Date(this._inputData.val().replace(/-/g, ",")), parseInt(this._inputQuantidade.val()), parseFloat(this._inputValor.val()));
+                    const negociacao = new index_2.Negociacao(new Date(this._inputData.val().replace(/-/g, ',')), parseInt(this._inputQuantidade.val()), parseFloat(this._inputValor.val()));
                     console.log(this._negociacoes);
                     this._negociacoes.adiciona(negociacao);
                     this._negociacoesView.update(this._negociacoes);
-                    this._mensagemView.update("Negociação adicionada com sucessos");
+                    this._mensagemView.update('Negociação adicionada com sucessos');
                 }
             };
             exports_1("NegociacaoController", NegociacaoController);
