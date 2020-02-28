@@ -5,7 +5,8 @@
 		"noEmitOnError": true,
 		"noImplicitAny": true,
 		"module": "System",
-		"strictNullChecks": true
+		"strictNullChecks": true,
+		"experimentalDecorators": true
 	},
 	"include": ["app/ts/**/*"]
 }
