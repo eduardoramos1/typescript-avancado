@@ -1,7 +1,7 @@
 System.register([], function (exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
-    //  uma função decorator, deve retorar outra função
+    //  uma função decorator, deve retornar outra função
     function logarTempoDeExecucao(emSegundos = false) {
         return function (target, propertyKey, descriptor) {
             // value é o método que o decorator vai interceptar

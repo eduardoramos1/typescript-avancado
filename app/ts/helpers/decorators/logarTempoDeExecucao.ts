@@ -1,4 +1,4 @@
-//  uma função decorator, deve retorar outra função
+//  uma função decorator, deve retornar outra função
 export function logarTempoDeExecucao(emSegundos: boolean = false) {
 	return function(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
 		// value é o método que o decorator vai interceptar
